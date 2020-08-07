@@ -1,9 +1,6 @@
-import { TEXT_DISPLAY_CHARACTER_LIMIT } from "./constants";
+import {TEXT_DISPLAY_CHARACTER_LIMIT} from "./constants";
 
-function truncateTextWithEllipsis(
-  text,
-  characterLimit = TEXT_DISPLAY_CHARACTER_LIMIT
-) {
+function truncateTextWithEllipsis(text, characterLimit = TEXT_DISPLAY_CHARACTER_LIMIT) {
   let truncated = "-";
 
   if (text) {
@@ -14,4 +11,4 @@ function truncateTextWithEllipsis(
   return truncated;
 }
 
-export{truncateTextWithEllipsis}
+export {truncateTextWithEllipsis};

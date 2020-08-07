@@ -1,0 +1,3 @@
+# ignore these files since they are not in use for now
+App.test.js
+serviceWorker.js

@@ -15,10 +15,97 @@
     "build-react": "./script/build.sh react",
     "build-others": "./script/build.sh others",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "./node_modules/.bin/prettier --config ./.prettierrc --write \"src/**/*.{js,jsx}\"",
+    "eslint": "./node_modules/.bin/eslint --ext .jsx,.js src/",
+    "eslint:fix": "./node_modules/.bin/eslint --fix --ext .jsx,.js src/"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "@hipo/eslint-config-base",
+      "@hipo/eslint-config-react",
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "prettier",
+      "prettier/react"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.js?(x)"
+        ],
+        "rules": {
+          "react-hooks/rules-of-hooks": 2,
+          "react-hooks/exhaustive-deps": 1,
+          "no-undefined": 0,
+          "complexity": [
+            "error",
+            20
+          ],
+          "func-names": 0,
+          "class-methods-use-this": 0,
+          "id-length": 0,
+          "prefer-destructuring": [
+            "error",
+            {
+              "VariableDeclarator": {
+                "array": false,
+                "object": true
+              },
+              "AssignmentExpression": {
+                "array": false,
+                "object": false
+              }
+            },
+            {
+              "enforceForRenamedProperties": false
+            }
+          ],
+          "react/destructuring-assignment": 0,
+          "react/no-array-index-key": 0,
+          "react/jsx-filename-extension": [
+            1,
+            {
+              "extensions": [
+                ".jsx",
+                ".tsx"
+              ]
+            }
+          ],
+          "react/sort-comp": [
+            2,
+            {
+              "order": [
+                "static-methods",
+                "instance-variables",
+                "getters",
+                "setters",
+                "lifecycle",
+                "everything-else",
+                "rendering"
+              ],
+              "groups": {
+                "rendering": [
+                  "render",
+                  "/^render.+$/"
+                ]
+              }
+            }
+          ],
+          "react/require-optimization": 0,
+          "react/no-multi-comp": [
+            "error",
+            {
+              "ignoreStateless": true
+            }
+          ],
+          "react/no-did-update-set-state": 0,
+          "react/jsx-handler-names": 0,
+          "react/prop-types": 0
+        }
+      }
+    ]
   },
   "browserslist": {
     "production": [
@@ -31,5 +118,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@hipo/eslint-config-base": "2.1.4",
+    "@hipo/eslint-config-react": "1.0.4",
+    "eslint-config-prettier": "6.11.0",
+    "prettier": "2.0.5"
   }
 }
