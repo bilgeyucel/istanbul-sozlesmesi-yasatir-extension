@@ -27,7 +27,8 @@
       "@hipo/eslint-config-react",
       "eslint:recommended",
       "plugin:react/recommended",
-      "prettier"
+      "prettier",
+      "prettier/react"
     ],
     "overrides": [
       {
