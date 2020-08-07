@@ -1,0 +1,14 @@
+{
+  "short_name": "Istanbul Sozlesmesi Yasatir",
+  "name": "Istanbul Sozlesmesi Yasatir Chrome Extension",
+  "manifest_version": 2,
+  "version":"0.1.0",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "browser_action": {
+    "default_icon": "logo512.png",
+    "default_popup": "popup.html"
+  }
+}
