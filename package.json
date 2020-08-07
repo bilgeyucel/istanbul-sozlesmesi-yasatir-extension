@@ -15,7 +15,10 @@
     "build-react": "./script/build.sh react",
     "build-others": "./script/build.sh others",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "./node_modules/.bin/prettier --config ./.prettierrc --write \"src/**/*.{js,jsx}\"",
+    "eslint": "./node_modules/.bin/eslint --ext .jsx,.js src/",
+    "eslint:fix": "./node_modules/.bin/eslint --fix --ext .jsx,.js src/"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +34,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@hipo/eslint-config-base": "2.1.4",
+    "@hipo/eslint-config-react": "1.0.4",
+    "eslint": "7.6.0",
+    "eslint-config-prettier": "6.11.0",
+    "prettier": "2.0.5"
   }
 }
