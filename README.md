@@ -35,4 +35,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Builds the app for production to into the `dist` folder. Later on this `dist` folder can be uploaded as extension.
 
-See the steps under `How to publish extensions on chrome`[How to build and publish a chrome extension](https://medium.com/mobile-web-dev/how-to-build-and-publish-a-chrome-extension-in-10-minutes-browser-extension-explained-6caa17df46f)
+See the steps under `How to publish extensions on chrome` -> [How to build and publish a chrome extension](https://medium.com/mobile-web-dev/how-to-build-and-publish-a-chrome-extension-in-10-minutes-browser-extension-explained-6caa17df46f)
