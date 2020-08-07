@@ -12,33 +12,36 @@ function App() {
   isFullNoteVisible: true});
   
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="app-header-title">
-         {"#istanbulsozlemesiyasatir"}
+    <div className={"App"}>
+      <header className={"App-header"}>
+        <h1 className={"app-header-title"}>
+          {"#istanbulsozlemesiyasatir"}
         </h1>
       </header>
       <section className={"app-section"}>
-        <h2 className="" title={state.articleTitle}>
+        <h2 className={""}
+title={state.articleTitle}>
           {state.articleTitle}
         </h2>
-        <p className="app-section-body" title={state.articleBody}>
+        <p className={"app-section-body"}
+title={state.articleBody}>
           {state.isFullNoteVisible ? state.articleBody : truncateTextWithEllipsis(state.articleBody, TEXT_DISPLAY_CHARACTER_LIMIT)}
         </p>
         {state.shouldDisplaySeeMoreButton && (
-          <button
-            id={"MnLongDescription.read-more-button"}
+          <button id={"MnLongDescription.read-more-button"}
             className={"read-more-button"}
             onClick={handleReadMoreButtonClick}>
             {state.isFullNoteVisible ? "daha az göster" : "daha fazla oku"}
           </button>
         )}
       </section>
-      <footer className="app-footer">
-      <button className="next-button" onClick={onPrevButtonClick}>
+      <footer className={"app-footer"}>
+        <button className={"next-button"}
+onClick={onPrevButtonClick}>
           {"Önceki"}
         </button>
-        <button className="next-button" onClick={onNextButtonClick}>
+        <button className={"next-button"}
+onClick={onNextButtonClick}>
           {"Sonraki"}
         </button>
       </footer>

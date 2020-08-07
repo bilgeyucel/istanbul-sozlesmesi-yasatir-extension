@@ -21,7 +21,90 @@
     "eslint:fix": "./node_modules/.bin/eslint --fix --ext .jsx,.js src/"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "@hipo/eslint-config-base",
+      "@hipo/eslint-config-react",
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "prettier"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.js?(x)"
+        ],
+        "rules": {
+          "react-hooks/rules-of-hooks": 2,
+          "react-hooks/exhaustive-deps": 1,
+          "no-undefined": 0,
+          "complexity": [
+            "error",
+            20
+          ],
+          "func-names": 0,
+          "class-methods-use-this": 0,
+          "id-length": 0,
+          "prefer-destructuring": [
+            "error",
+            {
+              "VariableDeclarator": {
+                "array": false,
+                "object": true
+              },
+              "AssignmentExpression": {
+                "array": false,
+                "object": false
+              }
+            },
+            {
+              "enforceForRenamedProperties": false
+            }
+          ],
+          "react/destructuring-assignment": 0,
+          "react/no-array-index-key": 0,
+          "react/jsx-filename-extension": [
+            1,
+            {
+              "extensions": [
+                ".jsx",
+                ".tsx"
+              ]
+            }
+          ],
+          "react/sort-comp": [
+            2,
+            {
+              "order": [
+                "static-methods",
+                "instance-variables",
+                "getters",
+                "setters",
+                "lifecycle",
+                "everything-else",
+                "rendering"
+              ],
+              "groups": {
+                "rendering": [
+                  "render",
+                  "/^render.+$/"
+                ]
+              }
+            }
+          ],
+          "react/require-optimization": 0,
+          "react/no-multi-comp": [
+            "error",
+            {
+              "ignoreStateless": true
+            }
+          ],
+          "react/no-did-update-set-state": 0,
+          "react/jsx-handler-names": 0,
+          "react/prop-types": 0
+        }
+      }
+    ]
   },
   "browserslist": {
     "production": [
@@ -38,7 +121,6 @@
   "devDependencies": {
     "@hipo/eslint-config-base": "2.1.4",
     "@hipo/eslint-config-react": "1.0.4",
-    "eslint": "7.6.0",
     "eslint-config-prettier": "6.11.0",
     "prettier": "2.0.5"
   }
