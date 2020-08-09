@@ -1,6 +1,6 @@
 import React from "react";
 
-import {ArticleWithContentItems} from "../articleWithContentItems";
+import {ArticleWithContentItems} from "./with-content-items/ArticleWithContentItems";
 
 function Article({article}) {
   return (

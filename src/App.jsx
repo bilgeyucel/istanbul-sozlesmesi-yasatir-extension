@@ -2,7 +2,7 @@ import "./App.css";
 
 import React, {useState} from "react";
 
-import {CONVENTION_ARTICLES} from "./convention";
+import {CONVENTION_ARTICLES} from "./convention/convention";
 import {Article} from "./article/Article";
 
 function App() {
